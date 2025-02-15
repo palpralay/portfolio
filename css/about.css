@@ -150,6 +150,7 @@
 }
 
 .learn-more {
+  margin-top: 1.5rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -176,7 +177,8 @@
 }
 
 .learn-more:hover {
-  color: #fff !important;
+  color: #000!important;
+  font-weight: 500;
   transform: translateY(-2px);
 }
 
