@@ -1,89 +1,3 @@
-* {
-  /* outline: 0.5px solid #c34848; */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-:root {
-  --c-vd: #0b0c10;
-  --c-nd: #1f2833;
-  --c-lt: #c5c6c7;
-  --c-lm: #66fcf1;
-  --c-dm: #45a29e;
-}
-
-body {
-  position: relative;
-  width: 100%;
-  min-height: 100svh;
-  background-image: linear-gradient(to bottom right, rgb(8,28,47),rgb(8,28,41), rgb(35,7,77));
-}
-
-/* -------------------------------------------------
-                    HEADER SECTION
---------------------------------------------------- */
-
-.header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 10%;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.header .logo {
-  font-size: 25px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-}
-
-.header .navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-left: 35px;
-  transition: 0.3s;
-}
-.header .navbar a {
-  font-size: 22px;
-  position: relative;
-  display: inline-block;
-  padding: 10px 15px;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.header .navbar a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background-color: #0ef;
-  transition: width 0.3s ease-in-out;
-}
-
-.header .navbar a:hover::before {
-  width: 100%;
-}
-
-.header .navbar a:hover {
-  color: #0ef;
-}
-
 /* -------------------------------------------------
                     HOME SECTION
 --------------------------------------------------- */
@@ -95,7 +9,7 @@ body {
   align-items: center;
   gap: 60px;
   padding: 20px;
-  margin-top: 100px;
+  padding-top: 100px;
   color: #fff;
 }
 .img {
@@ -132,11 +46,10 @@ body {
 }
 .home-content span {
   color: #0ef;
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
 }
 .home-content h1 {
   font-size: 2rem;
-  
 }
 
 .home-sci {
@@ -161,7 +74,8 @@ body {
   width: 50px;
   height: 50px;
   font-size: 24px;
-  color: #fff;
+  color: var(--c-lm);
+  text-decoration: none;
   background: transparent;
   border: 2px solid cyan;
   border-radius: 50%;
@@ -175,7 +89,7 @@ body {
     0 0 200px cyan;
 }
 
-.more-abt a{
+.more-abt a {
   display: inline-block;
   padding: 12px 28px;
   background: cyan;
@@ -186,8 +100,123 @@ body {
   text-decoration: none;
   letter-spacing: 1px;
 }
-
-.more-abt a:hover{
+.more-abt a:hover {
   box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
-  0 0 200px cyan;
+    0 0 200px cyan;
+}
+/* ----------------------------responsive css----------------------------- */
+/* Default styles (Desktop) */
+@media screen and (max-width: 1200px) {
+  .home {
+    flex-direction: column; /* Stack image & text */
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .home-content {
+    align-items: center; /* Center text */
+  }
+
+  .home-sci {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+/* Tablet View (Medium Screens) */
+@media screen and (max-width: 992px) {
+  .home {
+    padding: 50px 5%;
+  }
+
+  .home-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .home-sci a {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+/* Mobile View (Small Screens) */
+@media screen and (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .home-content {
+    width: 90%;
+  }
+
+  .home-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .home-sci {
+    gap: 10px;
+  }
+
+  .home-sci a {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .more-abt a {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Very Small Screens */
+@media screen and (max-width: 480px) {
+  .home {
+    padding: 15px;
+  }
+
+  .img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .home-content h1 {
+    font-size: 1.3rem;
+  }
+
+  .home-content p {
+    font-size: 0.9rem;
+  }
+
+  .home-sci a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .more-abt a {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
 }
