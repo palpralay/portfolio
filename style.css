@@ -18,7 +18,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 100svh;
-  background-image: linear-gradient(var(--c-vd), #081c29);
+  background-image: linear-gradient(to bottom right, rgb(8,28,47),rgb(8,28,41), rgb(35,7,77));
 }
 
 /* -------------------------------------------------
