@@ -4,8 +4,8 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-
   /* outline: 0.5px solid #c34848; */
+  height: auto;
 }
 
 :root {
@@ -27,9 +27,18 @@ body {
     rgb(8, 28, 47),
     rgb(8, 28, 47),
     rgb(8, 28, 47),
-    rgb(8, 28, 41),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(35, 7, 77),
     rgb(35, 7, 77),
     rgb(35, 7, 77),
     rgb(35, 7, 77)
+
   );
 }

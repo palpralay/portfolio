@@ -8,3 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
         startDelay: 1000
     });
 });
+
+// function setProgress(id, percentage) {
+//     let degree = (percentage / 100) * 360;
+//     document.getElementById(id).style.background = `conic-gradient(#00e0ff ${degree}deg, #333 ${degree}deg)`;
+// }
+
+// window.onload = function() {
+//     setProgress("creativity", 90);
+//     setProgress("communication", 65);
+//     setProgress("problem-solving", 75);
+//     setProgress("teamwork", 85);
+// };
