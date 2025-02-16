@@ -42,3 +42,12 @@ body {
 
   );
 }
+
+.star {
+  position: fixed;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 1;
+}
