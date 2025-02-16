@@ -1,8 +1,15 @@
+.service-skill {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
 #skills {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10%;
   opacity: 0;
   animation: sectionFade 0.8s ease-out forwards;
 }
@@ -16,13 +23,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.service-skill {
-  display: grid;
-  grid-template-columns: auto auto;
-  position: relative;
-  /* top: 0px; */
 }
 
 .skills-box  h2 {
