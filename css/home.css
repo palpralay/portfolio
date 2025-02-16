@@ -19,6 +19,27 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
+  animation: profileFade 1s ease-out forwards, profileFloat 3s ease-in-out infinite;
+}
+
+@keyframes profileFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes profileFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 .img::before {
   content: "";
@@ -43,6 +64,18 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  animation: contentSlide 0.8s ease-out forwards;
+}
+
+@keyframes contentSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .home-content span {
   color: #0ef;
@@ -79,14 +112,28 @@
   background: transparent;
   border: 2px solid cyan;
   border-radius: 50%;
-  transition: 0.3s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: socialFade 0.5s ease-out forwards;
+  animation-delay: calc(var(--i, 0) * 0.1s);
+  opacity: 0;
+}
+
+@keyframes socialFade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .home-sci a:hover {
   color: #000;
   background: cyan;
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
-    0 0 200px cyan;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan;
 }
 
 .more-abt a {
@@ -99,10 +146,27 @@
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 1px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation: buttonFade 0.8s ease-out forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
 }
+
+@keyframes buttonFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .more-abt a:hover {
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
-    0 0 200px cyan;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 15px cyan, 0 0 35px cyan;
+  letter-spacing: 2px;
 }
 /* ----------------------------responsive css----------------------------- */
 /* Default styles (Desktop) */
