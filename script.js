@@ -9,6 +9,31 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Mobile Menu Functionality
+const menuIcon = document.querySelector('.menu-icon');
+const navbar = document.querySelector('.navbar');
+
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('active');
+    navbar.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!menuIcon.contains(e.target) && !navbar.contains(e.target)) {
+        menuIcon.classList.remove('active');
+        navbar.classList.remove('active');
+    }
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('active');
+        navbar.classList.remove('active');
+    });
+});
+
 // function setProgress(id, percentage) {
 //     let degree = (percentage / 100) * 360;
 //     document.getElementById(id).style.background = `conic-gradient(#00e0ff ${degree}deg, #333 ${degree}deg)`;
