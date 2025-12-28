@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* outline: 0.5px solid #c34848; */
+  height: auto;
+}
+
+:root {
+  --c-vd: #0b0c10;
+  --c-nd: #1f2833;
+  --c-lt: #c5c6c7;
+  --c-lm: #66fcf1;
+  --c-dm: #45a29e;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(8, 28, 47),
+    rgb(35, 7, 77),
+    rgb(35, 7, 77),
+    rgb(35, 7, 77),
+    rgb(35, 7, 77)
+
+  );
+}
+
+.star {
+  position: fixed;
+  background-color: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 1;
+}
